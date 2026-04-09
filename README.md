@@ -1,71 +1,187 @@
-# Sorting Algorithms Analysis (ADA Lab - Unit 1)
+# Algorithm Design & Analysis – Unit 1-4 Lab (Java Implementation)
 
-This project implements and analyzes three sorting algorithms:
+## Overview
 
-- Bubble Sort
-- Selection Sort
-- Insertion Sort
+This repository contains Java implementations of fundamental algorithms from Algorithm Design & Analysis (ADA), along with empirical analysis of sorting algorithms. The project demonstrates core paradigms including **Greedy, Dynamic Programming, Divide & Conquer, and Backtracking**, and includes performance evaluation using step counts and graphical visualization.
 
-The performance of each algorithm is analyzed using the Step-Count Method.
+---
 
-----------------------------------------------------
+## Implemented Algorithms
 
-## Objective
+### 1. Sorting Algorithms
 
-- Sort numbers in ascending and descending order.
-- Count key operations (comparisons and swaps).
-- Analyze Best, Average, and Worst cases.
-- Compare performance for input sizes:
-  10, 20, 30, 40.
-- Plot graphs for Input Size vs Step Count.
+* Bubble Sort
+* Selection Sort
+* Insertion Sort
 
-----------------------------------------------------
+Each algorithm is implemented with:
 
-## Step-Count Method
+* Ascending and descending order support
+* Step count tracking (comparisons + swaps)
+* Analysis across best, average, and worst cases
 
-We count:
-- 1 comparison = 1 step
-- 1 swap = 3 steps (assignment operations)
+---
 
-This helps measure time complexity practically.
+### 2. Searching Algorithms
 
-----------------------------------------------------
+* Linear Search
+* Binary Search
 
-## Cases Analyzed
+---
 
-1. Best Case → Already sorted input
-2. Average Case → Randomized input
-3. Worst Case → Reverse sorted input
+### 3. Greedy Algorithms
 
-----------------------------------------------------
+* Fractional Knapsack
+* Dijkstra’s Shortest Path Algorithm
 
-## How to Run
+---
 
-1. Install matplotlib:
+### 4. Dynamic Programming
 
-   pip install matplotlib
+* 0/1 Knapsack
+* Longest Common Subsequence (LCS)
+* Bellman-Ford Algorithm
 
-2. Run the program:
+---
 
-   python sorting_analysis.py
+### 5. Divide & Conquer
 
-3. Graphs will be automatically saved inside:
+* Merge Sort
+* Quick Sort
+* Matrix Multiplication
 
-   screenshots_of_graphs/
+---
 
-----------------------------------------------------
+### 6. Backtracking
 
-## Files Included
+* N-Queens Problem
 
-- sorting_analysis.py → Main implementation
-- sample_output.txt → Example output
-- screenshots_of_graphs/ → Generated graphs
+---
 
-----------------------------------------------------
+## Sorting Analysis
 
-## Expected Learning
+The project includes an empirical analysis of sorting algorithms:
 
-- Understanding sorting algorithm behavior
-- Comparing time complexities
-- Practical analysis using step counting
-- Graphical performance comparison
+### Input Cases
+
+* Best Case (sorted)
+* Average Case (random)
+* Worst Case (reverse sorted)
+
+### Metrics
+
+* Step count (basic operations)
+* Input sizes: 10, 20, 30, 40
+
+### Output
+
+* Console output showing sorted arrays and step counts
+* CSV file (`results.csv`) storing:
+
+  ```
+  Algorithm, Input Size, Steps
+  ```
+
+---
+
+## Graph Visualization
+
+Graphs are generated using Python (matplotlib).
+
+### Steps to Generate Graphs
+
+1. Run Java program:
+
+   ```bash
+   javac sorting_analysis.java
+   java sorting_analysis
+   ```
+
+2. Ensure `results.csv` is created
+
+3. Run Python script:
+
+   ```bash
+   python plot_graph.py
+   ```
+
+4. Output:
+
+   * Graph displayed OR
+   * Saved as `.png` file in project folder
+
+---
+
+## Project Structure
+
+```
+├── sorting_analysis.java
+├── Knapsack01.java
+├── FractionalKnapsack.java
+├── MatrixMultiplication.java
+├── LCS.java
+├── Dijkstra.java
+├── BellmanFord.java
+├── NQueens.java
+├── results.csv
+├── plot_graph.py
+└── README.md
+```
+
+---
+
+## Key Concepts Demonstrated
+
+* Time complexity vs empirical analysis
+* Greedy vs Dynamic Programming trade-offs
+* Recursion and backtracking
+* Data structures (arrays, lists, maps, priority queues)
+* Algorithm optimization techniques
+
+---
+
+## Requirements
+
+### Java
+
+* JDK 8 or higher
+
+### Python (for graphs)
+
+* Python 3.x
+* Libraries:
+
+  ```bash
+  pip install matplotlib pandas
+  ```
+
+---
+
+## Observations
+
+* Bubble and Selection Sort show **O(n²)** growth
+* Insertion Sort performs better on nearly sorted data
+* Step count increases significantly with input size
+* Graphs clearly illustrate performance differences
+
+---
+
+## Future Improvements
+
+* Add Merge Sort and Quick Sort to analysis
+* Include runtime benchmarking (`System.nanoTime`)
+* Separate graphs for best/average/worst cases
+* Use advanced visualization (Seaborn / JFreeChart)
+* Implement space optimization techniques
+
+---
+
+## Author
+
+Navya Singh
+
+---
+
+## License
+
+This project is for academic and educational purposes.
