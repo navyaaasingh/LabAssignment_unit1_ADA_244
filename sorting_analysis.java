@@ -180,6 +180,14 @@ public class sorting_analysis {
         }
     }
 
+    try {
+        FileWriter fw = new FileWriter("results.csv");
+        fw.write(""); // clear file
+        fw.close();
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+
     public static void main(String[] args) {
         analyzeSorting();
     }
